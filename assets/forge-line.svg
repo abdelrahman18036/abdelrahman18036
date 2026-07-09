@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="Forge Line — selected work ledger with a rotating orange citrus seal on a projection stage.">
+  <title>abd·orange — Forge Line</title>
+  <defs>
+    <radialGradient id="stageGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#FF4500" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fireRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0"/>
+      <stop offset="12%" stop-color="#FF6B00" stop-opacity="0.9"/>
+      <stop offset="88%" stop-color="#FF8A00" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF8A00" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @keyframes breathe { 0%,100% { opacity:0.20; } 50% { opacity:0.45; } }
+      @keyframes pulse   { 0%,100% { opacity:1; } 50% { opacity:0.15; } }
+      @keyframes flick   { 0%,100% { opacity:0.55; } 50% { opacity:0.9; } }
+      .glowRing { animation: breathe 4.2s ease-in-out infinite; }
+      .statusDot { animation: pulse 1.8s ease-in-out infinite; }
+      .scan { animation: flick 3.4s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Seamless GitHub-dark canvas -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <!-- ============ TOP HUD STRIP ============ -->
+  <text x="40" y="42" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" letter-spacing="0.22em" fill="#9C9C9C">SELECTED WORK // FORGE LINE</text>
+  <g>
+    <circle class="statusDot" cx="762" cy="37" r="4" fill="#FF6B00"/>
+    <text x="948" y="42" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" letter-spacing="0.20em" fill="#9C9C9C">09 UNITS · ONLINE</text>
+  </g>
+  <rect x="40" y="58" width="920" height="1.4" fill="url(#fireRule)"/>
+
+  <!-- ============ LEFT COLUMN — PROJECT LEDGER ============ -->
+  <!-- moving active-row indicator: steps down 9 rows, dwelling ~1s each -->
+  <g transform="translate(0,100)">
+    <g>
+      <rect x="40" y="2" width="452" height="40" fill="#FF6B00" opacity="0.07"/>
+      <rect x="40" y="6" width="3" height="32" fill="#FF6B00"/>
+      <polygon points="474,14 480,17.5 480,24.5 474,28 468,24.5 468,17.5" fill="#FF6B00"/>
+      <animateTransform attributeName="transform" type="translate" calcMode="discrete"
+        values="0 0;0 44;0 88;0 132;0 176;0 220;0 264;0 308;0 352"
+        dur="9s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Ledger rows (row i top = 100 + i*44) -->
+  <!-- 01 -->
+  <text x="50" y="124" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">01</text>
+  <text x="92" y="120" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">NOXIY</text>
+  <text x="92" y="135" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">SOFTWARE HOUSE</text>
+  <!-- 02 -->
+  <text x="50" y="168" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">02</text>
+  <text x="92" y="164" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">LOOP DIMENSION</text>
+  <text x="92" y="179" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">TECH COMPANY</text>
+  <!-- 03 -->
+  <text x="50" y="212" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">03</text>
+  <text x="92" y="208" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">OPSERA</text>
+  <text x="92" y="223" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">CLOUD PLATFORM</text>
+  <!-- 04 -->
+  <text x="50" y="256" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">04</text>
+  <text x="92" y="252" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">LUNEXA-IOE</text>
+  <text x="92" y="267" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">IOE PLATFORM</text>
+  <!-- 05 -->
+  <text x="50" y="300" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">05</text>
+  <text x="92" y="296" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">A-SIC</text>
+  <text x="92" y="311" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">CRYPTOCURRENCY</text>
+  <!-- 06 -->
+  <text x="50" y="344" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">06</text>
+  <text x="92" y="340" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">BYOND MEDIA</text>
+  <text x="92" y="355" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">VIDEO PRODUCTION</text>
+  <!-- 07 -->
+  <text x="50" y="388" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">07</text>
+  <text x="92" y="384" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">HOUZIT</text>
+  <text x="92" y="399" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">FURNITURE E-COMMERCE</text>
+  <!-- 08 -->
+  <text x="50" y="432" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">08</text>
+  <text x="92" y="428" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">MAKERSGATE</text>
+  <text x="92" y="443" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">INSTANT MANUFACTURING</text>
+  <!-- 09 -->
+  <text x="50" y="476" font-family="'JetBrains Mono','Courier New',monospace" font-size="15" letter-spacing="0.12em" fill="#FF6B00">09</text>
+  <text x="92" y="472" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="17" letter-spacing="-0.01em" fill="#FAFAFA">UNLIMITED EG</text>
+  <text x="92" y="487" font-family="'JetBrains Mono','Courier New',monospace" font-size="9.5" letter-spacing="0.16em" fill="#9C9C9C">EDTECH</text>
+
+  <!-- vertical divider between ledger and stage -->
+  <line x1="516" y1="80" x2="516" y2="500" stroke="#1A1A1A" stroke-width="1"/>
+
+  <!-- ============ RIGHT STAGE — PROJECTION ============ -->
+  <rect x="540" y="90" width="420" height="382" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
+  <rect x="540" y="90" width="420" height="382" fill="url(#stageGlow)"/>
+  <text x="552" y="110" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" letter-spacing="0.24em" fill="#5C6670">PROJECTION</text>
+  <text x="948" y="110" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="10" letter-spacing="0.18em" fill="#5C6670">STAGE · 01</text>
+
+  <!-- breathing rind glow (non-rotating) -->
+  <circle class="glowRing" cx="748" cy="286" r="132" fill="none" stroke="#FF4500" stroke-width="7" opacity="0.20"/>
+
+  <!-- rotating citrus seal -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0 748 286" to="360 748 286" dur="40s" repeatCount="indefinite"/>
+    <!-- particle dashed ring -->
+    <circle cx="748" cy="286" r="126" fill="none" stroke="#FF8A00" stroke-width="1" stroke-dasharray="2 8" opacity="0.6"/>
+    <!-- rind rings -->
+    <circle cx="748" cy="286" r="132" fill="none" stroke="#FF6B00" stroke-width="2.4"/>
+    <circle cx="748" cy="286" r="120" fill="none" stroke="#FF6B00" stroke-width="1.4" opacity="0.75"/>
+    <!-- 8 wedge lines -->
+    <g stroke="#FF8A00" stroke-width="1.4" opacity="0.85" stroke-linecap="round">
+      <line x1="774" y1="286" x2="868" y2="286"/>
+      <line x1="766.4" y1="304.4" x2="832.9" y2="370.9"/>
+      <line x1="748" y1="312" x2="748" y2="406"/>
+      <line x1="729.6" y1="304.4" x2="663.1" y2="370.9"/>
+      <line x1="722" y1="286" x2="628" y2="286"/>
+      <line x1="729.6" y1="267.6" x2="663.1" y2="201.1"/>
+      <line x1="748" y1="260" x2="748" y2="166"/>
+      <line x1="766.4" y1="267.6" x2="832.9" y2="201.1"/>
+    </g>
+    <!-- seeds -->
+    <g fill="#FF8A00">
+      <circle cx="810.8" cy="312" r="4"/>
+      <circle cx="774" cy="348.8" r="4"/>
+      <circle cx="722" cy="348.8" r="4"/>
+      <circle cx="685.2" cy="312" r="4"/>
+      <circle cx="685.2" cy="260" r="4"/>
+      <circle cx="722" cy="223.2" r="4"/>
+      <circle cx="774" cy="223.2" r="4"/>
+      <circle cx="810.8" cy="260" r="4"/>
+    </g>
+    <!-- center pip -->
+    <circle cx="748" cy="286" r="11" fill="#FF6B00"/>
+    <circle cx="748" cy="286" r="5" fill="#FF8A00"/>
+  </g>
+
+  <!-- rotating scan sweep hint -->
+  <line class="scan" x1="748" y1="286" x2="748" y2="158" stroke="#19e3ff" stroke-width="0.8" opacity="0.55">
+    <animateTransform attributeName="transform" type="rotate" from="0 748 286" to="360 748 286" dur="6s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- label under seal -->
+  <text x="748" y="452" text-anchor="middle" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="0.22em" fill="#9C9C9C">RE-FORGING · PER UNIT</text>
+
+  <!-- ============ BOTTOM HUD ============ -->
+  <rect x="40" y="510" width="920" height="1" fill="#1A1A1A"/>
+  <text x="40" y="534" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="0.16em" fill="#9C9C9C">END-TO-END · DESIGN → BUILD → DEPLOY · SOLO</text>
+  <text x="960" y="534" text-anchor="end" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" letter-spacing="0.14em" fill="#9C9C9C">CAIRO · 30.0444°N 31.2357°E</text>
+
+  <!-- ============ HUD CORNER TICKS ============ -->
+  <g stroke="#FF6B00" stroke-width="1.6" fill="none" opacity="0.85">
+    <path d="M40 22 L40 12 L50 12"/>
+    <path d="M960 22 L960 12 L950 12"/>
+    <path d="M40 538 L40 548 L50 548"/>
+    <path d="M960 538 L960 548 L950 548"/>
+  </g>
+</svg>

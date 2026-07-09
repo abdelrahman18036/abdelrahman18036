@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 150" width="1000" height="150" role="img" aria-label="Transmission note: one WebGL particle field flows through the whole page and collapses into a citrus. COLOR to SEAL to FRUIT. See it move at abdorange.me">
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes blink { 0%,45%{opacity:1;} 55%,100%{opacity:0.18;} }
+    @keyframes glide { 0%{transform:translateX(0);opacity:0;} 12%{opacity:1;} 88%{opacity:1;} 100%{transform:translateX(724px);opacity:0;} }
+    @keyframes breathe { 0%,100%{opacity:0.55;} 50%{opacity:0.95;} }
+    .glyph { transform-box:fill-box; transform-origin:center; animation:spin 14s linear infinite; }
+    .dot { animation:blink 2.4s ease-in-out infinite; }
+    .node { animation:glide 4.5s ease-in-out infinite; }
+    .ul { animation:breathe 3.6s ease-in-out infinite; }
+  </style>
+
+  <!-- seamless GitHub-dark canvas -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <!-- HUD panel -->
+  <rect x="8" y="8" width="984" height="134" rx="4" fill="#0A0A0A"/>
+  <rect x="8.5" y="8.5" width="983" height="133" rx="4" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+
+  <!-- HUD corner ticks -->
+  <g stroke="#FF6B00" stroke-width="1.4" fill="none" opacity="0.85">
+    <path d="M20 22 L20 14 L28 14"/>
+    <path d="M980 22 L980 14 L972 14"/>
+    <path d="M20 128 L20 136 L28 136"/>
+    <path d="M980 128 L980 136 L972 136"/>
+  </g>
+
+  <!-- LEFT: rotating citrus glyph -->
+  <g transform="translate(66,75)">
+    <circle r="34" fill="#0d1117" stroke="#2A2A2A" stroke-width="1"/>
+    <g class="glyph">
+      <circle r="30" fill="none" stroke="#FF6B00" stroke-width="2.4"/>
+      <circle r="24" fill="none" stroke="#FF4500" stroke-width="1" opacity="0.5"/>
+      <g stroke="#FF8A00" stroke-width="1.2" opacity="0.9">
+        <line x1="0" y1="0" x2="0" y2="-24"/>
+        <line x1="0" y1="0" x2="17" y2="-17"/>
+        <line x1="0" y1="0" x2="24" y2="0"/>
+        <line x1="0" y1="0" x2="17" y2="17"/>
+        <line x1="0" y1="0" x2="0" y2="24"/>
+        <line x1="0" y1="0" x2="-17" y2="17"/>
+        <line x1="0" y1="0" x2="-24" y2="0"/>
+        <line x1="0" y1="0" x2="-17" y2="-17"/>
+      </g>
+      <g fill="#FF6B00">
+        <circle cx="0" cy="-13" r="1.7"/>
+        <circle cx="9" cy="-9" r="1.7"/>
+        <circle cx="13" cy="0" r="1.7"/>
+        <circle cx="9" cy="9" r="1.7"/>
+        <circle cx="0" cy="13" r="1.7"/>
+        <circle cx="-9" cy="9" r="1.7"/>
+        <circle cx="-13" cy="0" r="1.7"/>
+        <circle cx="-9" cy="-9" r="1.7"/>
+      </g>
+      <circle r="4" fill="#FF6B00"/>
+    </g>
+  </g>
+
+  <!-- section code + status -->
+  <g font-family="'JetBrains Mono','Courier New',monospace">
+    <circle class="dot" cx="126" cy="34" r="3" fill="#FF6B00"/>
+    <text x="136" y="38" font-size="10" letter-spacing="0.18em" fill="#9C9C9C">TRANSMISSION 06 · LIVE</text>
+  </g>
+
+  <!-- CENTER text -->
+  <text x="126" y="72" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="14" letter-spacing="-0.01em">
+    <tspan fill="#FAFAFA">One particle field runs the whole page — and </tspan><tspan fill="#9C9C9C">abd·</tspan><tspan fill="#FF6B00">orange</tspan><tspan fill="#9C9C9C"> becomes literal:</tspan>
+  </text>
+
+  <text x="126" y="98" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" letter-spacing="0.06em">
+    <tspan fill="#FF6B00" font-weight="700">COLOR</tspan><tspan fill="#FF6B00"> → </tspan><tspan fill="#FF6B00" font-weight="700">SEAL</tspan><tspan fill="#FF6B00"> → </tspan><tspan fill="#FF6B00" font-weight="700">FRUIT</tspan><tspan fill="#9C9C9C">   · same matter, first frame to last.</tspan>
+  </text>
+
+  <!-- fire underline + traveling glow node -->
+  <g transform="translate(126,112)">
+    <line class="ul" x1="0" y1="0" x2="724" y2="0" stroke="#FF6B00" stroke-width="1.2" opacity="0.6"/>
+    <line x1="0" y1="0" x2="724" y2="0" stroke="#1A1A1A" stroke-width="0.6" opacity="0.4"/>
+    <g class="node">
+      <circle cx="0" cy="0" r="6" fill="#FF6B00" opacity="0.25"/>
+      <circle cx="0" cy="0" r="2.4" fill="#FF8A00"/>
+    </g>
+  </g>
+
+  <!-- RIGHT: fire CTA chip -->
+  <g transform="translate(872,75)">
+    <rect x="-108" y="-18" width="216" height="36" rx="18" fill="#0d1117" stroke="#FF6B00" stroke-width="1.3"/>
+    <rect x="-108" y="-18" width="216" height="36" rx="18" fill="#FF6B00" opacity="0.06"/>
+    <path d="M-90 -5 L-90 5 L-82 0 Z" fill="#FF6B00"/>
+    <text x="-74" y="3" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" letter-spacing="0.06em" fill="#FAFAFA">SEE IT MOVE · </text>
+    <text x="4" y="3" font-family="'JetBrains Mono','Courier New',monospace" font-size="9" letter-spacing="0.06em" fill="#FF6B00" font-weight="700">abdorange.me</text>
+  </g>
+</svg>
