@@ -37,7 +37,25 @@
 
 </div>
 
-<div align="center"><sub>Nine products, shipped end-to-end — design → build → deploy, solo. Explore them live at <b><a href="https://www.abdorange.me">abdorange.me</a></b>.</sub></div>
+<div align="center">
+
+<a href="https://noxiy.com"><img src="https://img.shields.io/badge/01-NOXIY-FF6B00?style=flat-square&labelColor=0d1117" alt="NOXIY — noxiy.com" /></a>
+<a href="https://loopdimension.com"><img src="https://img.shields.io/badge/02-Loop_Dimension-FF6B00?style=flat-square&labelColor=0d1117" alt="Loop Dimension — loopdimension.com" /></a>
+<a href="https://opsera.org"><img src="https://img.shields.io/badge/03-Opsera-FF6B00?style=flat-square&labelColor=0d1117" alt="Opsera — opsera.org" /></a>
+<a href="https://www.lunexa-ioe.com/"><img src="https://img.shields.io/badge/04-Lunexa--IoE-FF6B00?style=flat-square&labelColor=0d1117" alt="Lunexa-IoE — lunexa-ioe.com" /></a>
+<a href="https://a-sic.vercel.app/"><img src="https://img.shields.io/badge/05-A--SIC-FF6B00?style=flat-square&labelColor=0d1117" alt="A-SIC — a-sic.vercel.app" /></a>
+<a href="https://byond-media.vercel.app"><img src="https://img.shields.io/badge/06-Byond_Media-FF6B00?style=flat-square&labelColor=0d1117" alt="Byond Media — byond-media.vercel.app" /></a>
+<a href="https://www.houzit.net/"><img src="https://img.shields.io/badge/07-Houzit-FF6B00?style=flat-square&labelColor=0d1117" alt="Houzit — houzit.net" /></a>
+<a href="https://www.makersgate.cloud"><img src="https://img.shields.io/badge/08-MakersGate-FF6B00?style=flat-square&labelColor=0d1117" alt="MakersGate — makersgate.cloud" /></a>
+<a href="https://unlimited-eta.vercel.app/"><img src="https://img.shields.io/badge/09-Unlimited_EG-FF6B00?style=flat-square&labelColor=0d1117" alt="Unlimited EG — unlimited-eta.vercel.app" /></a>
+
+</div>
+
+<div align="center">
+
+<a href="https://www.abdorange.me"><img src="./assets/forge-caption.svg" alt="Nine products, shipped end-to-end — design → build → deploy, solo. Explore them live at abdorange.me" width="100%" /></a>
+
+</div>
 
 <br />
 
