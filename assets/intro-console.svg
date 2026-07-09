@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="core/void identity handshake terminal. SUBJECT.01 Abdelrahman Abdelnasser, Abdo Orange — Software Engineer, AI Specialist, DevOps Engineer. Cairo, Egypt. Open to work. Forging the Hextech World.">
+  <title>core/void — identity handshake · abd·orange</title>
+
+  <defs>
+    <!-- Fire glow bleeding from upper-right -->
+    <radialGradient id="glow" cx="88%" cy="4%" r="78%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.16"/>
+      <stop offset="40%" stop-color="#FF4500" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Vertical scanline gradient -->
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF8A00" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Wordmark-ish fire gradient (for value accents if needed) -->
+    <linearGradient id="fireText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF4500"/>
+      <stop offset="100%" stop-color="#FF8A00"/>
+    </linearGradient>
+
+    <!-- Reusable soft glow -->
+    <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Rounded window clip -->
+    <clipPath id="win">
+      <rect x="20" y="20" width="960" height="400" rx="12"/>
+    </clipPath>
+
+    <!-- Small pointy hexagon (texture) -->
+    <g id="hx">
+      <polygon points="0,-7 6,-3.5 6,3.5 0,7 -6,3.5 -6,-3.5" fill="none" stroke-width="1.2"/>
+    </g>
+    <!-- Tiny pointy hexagon (title-bar dots) -->
+    <g id="hxs">
+      <polygon points="0,-5 4.33,-2.5 4.33,2.5 0,5 -4.33,2.5 -4.33,-2.5" fill="none" stroke-width="1.3"/>
+    </g>
+
+    <!-- Typing reveal clips: static width = full (poster shows all); SMIL types on once -->
+    <clipPath id="t1"><rect x="46" y="82" width="640" height="24"><animate attributeName="width" values="0;640" dur="0.7s" begin="0.25s" fill="freeze" calcMode="linear"/></rect></clipPath>
+    <clipPath id="t2"><rect x="46" y="110" width="640" height="24"><animate attributeName="width" values="0;640" dur="0.7s" begin="1.05s" fill="freeze" calcMode="linear"/></rect></clipPath>
+    <clipPath id="t3"><rect x="46" y="138" width="640" height="24"><animate attributeName="width" values="0;640" dur="0.7s" begin="1.9s" fill="freeze" calcMode="linear"/></rect></clipPath>
+
+    <style>
+      .mono { font-family: 'JetBrains Mono','Courier New',monospace; }
+      .disp { font-family: 'Segoe UI','Helvetica Neue',Arial,sans-serif; }
+      @keyframes curBlink { 0%,48% { opacity: 1; } 49%,100% { opacity: 0; } }
+      @keyframes dotBlink { 0%,55% { opacity: 1; } 56%,100% { opacity: 0.12; } }
+      @keyframes lockBlink { 0%,60% { opacity: 1; } 61%,100% { opacity: 0.25; } }
+      @keyframes ruleP { 0%,100% { opacity: 0.28; } 50% { opacity: 0.6; } }
+      .cursor { animation: curBlink 1.05s steps(1) infinite; }
+      .dot { animation: dotBlink 1.5s ease-in-out infinite; }
+      .lock { animation: lockBlink 0.9s steps(1) infinite; }
+      .rule { animation: ruleP 4.5s ease-in-out infinite; }
+      /* resting cursor appears only after boot lines finish */
+      .rest { opacity: 0; animation: curBlink 1.05s steps(1) infinite 2.7s; }
+    </style>
+  </defs>
+
+  <!-- Seamless GitHub-dark backing -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <!-- ===== Windowed content (clipped to rounded rect) ===== -->
+  <g clip-path="url(#win)">
+    <!-- recessed terminal body -->
+    <rect x="20" y="20" width="960" height="400" fill="#0A0A0A"/>
+    <rect x="20" y="20" width="960" height="400" fill="url(#glow)"/>
+
+    <!-- title bar strip (deeper void) -->
+    <rect x="20" y="20" width="960" height="38" fill="#050505"/>
+
+    <!-- faint hex texture, lower-right -->
+    <g opacity="0.10" stroke="#FF6B00">
+      <use href="#hx" x="905" y="360"/>
+      <use href="#hx" x="917" y="381"/>
+      <use href="#hx" x="893" y="381"/>
+      <use href="#hx" x="929" y="360"/>
+      <use href="#hx" x="881" y="360"/>
+    </g>
+
+    <!-- drifting scanline over the whole console -->
+    <rect x="20" y="20" width="960" height="70" fill="url(#scan)">
+      <animate attributeName="y" values="-50;420" dur="5.5s" repeatCount="indefinite" calcMode="linear"/>
+    </rect>
+  </g>
+
+  <!-- window border (on top, not clipped) -->
+  <rect x="20" y="20" width="960" height="400" rx="12" fill="none" stroke="#1A1A1A" stroke-width="1.5"/>
+
+  <!-- ===== TITLE BAR ===== -->
+  <g>
+    <use href="#hxs" x="44" y="39" stroke="#FF6B00"/>
+    <use href="#hxs" x="65" y="39" stroke="#5C6670"/>
+    <use href="#hxs" x="86" y="39" stroke="#5C6670"/>
+    <text class="mono" x="112" y="43" font-size="12.5" letter-spacing="0.14em" fill="#9C9C9C">core/void<tspan fill="#2A2A2A"> — </tspan><tspan fill="#FAFAFA">identity handshake</tspan></text>
+
+    <!-- right: blinking status -->
+    <circle class="dot" cx="828" cy="39" r="3.2" fill="#FF6B00" filter="url(#soft)"/>
+    <text class="mono" x="840" y="43" font-size="11" letter-spacing="0.18em" fill="#9C9C9C">IDENTITY SYNC</text>
+  </g>
+  <line x1="20" y1="58" x2="980" y2="58" stroke="#1A1A1A" stroke-width="1"/>
+
+  <!-- ===== BOOT SEQUENCE ===== -->
+  <g class="mono" font-size="15" letter-spacing="0.06em">
+    <g clip-path="url(#t1)">
+      <text x="46" y="99" fill="#9C9C9C"><tspan fill="#FF6B00">&gt;</tspan> cold start · core/void <tspan fill="#2A2A2A">.........</tspan> <tspan fill="#5C6670">OK</tspan></text>
+    </g>
+    <g clip-path="url(#t2)">
+      <text x="46" y="127" fill="#9C9C9C"><tspan fill="#FF6B00">&gt;</tspan> compile identity/glsl <tspan fill="#2A2A2A">..........</tspan> <tspan fill="#5C6670">OK</tspan></text>
+    </g>
+    <g clip-path="url(#t3)">
+      <text x="46" y="155" fill="#9C9C9C"><tspan fill="#FF6B00">&gt;</tspan> resolve SUBJECT.01 <tspan fill="#2A2A2A">.............</tspan> <tspan class="lock" fill="#FF6B00">LOCK</tspan></text>
+    </g>
+    <!-- resting block cursor after final line -->
+    <rect class="rest" x="452" y="143" width="9" height="15" fill="#FF6B00"/>
+  </g>
+
+  <!-- fire rule between boot + subject card -->
+  <line class="rule" x1="46" y1="176" x2="954" y2="176" stroke="#FF6B00" stroke-width="1"/>
+
+  <!-- ===== SUBJECT CARD (// columns aligned) ===== -->
+  <g class="mono" font-size="14" letter-spacing="0.04em">
+    <!-- row 1 -->
+    <text x="46"  y="205" fill="#9C9C9C">SUBJECT.01</text>
+    <text x="178" y="205" fill="#2A2A2A">//</text>
+    <text x="210" y="205" fill="#FAFAFA">ABDELRAHMAN ABDELNASSER<tspan fill="#5C6670">  ·  </tspan><tspan fill="#FF6B00">"Abdo Orange"</tspan></text>
+    <!-- row 2 -->
+    <text x="46"  y="231" fill="#9C9C9C">ROLE</text>
+    <text x="178" y="231" fill="#2A2A2A">//</text>
+    <text x="210" y="231" fill="#FAFAFA">Software Engineer<tspan fill="#5C6670"> · </tspan>AI Specialist<tspan fill="#5C6670"> · </tspan>DevOps Engineer</text>
+    <!-- row 3 -->
+    <text x="46"  y="257" fill="#9C9C9C">ORIGIN</text>
+    <text x="178" y="257" fill="#2A2A2A">//</text>
+    <text x="210" y="257" fill="#FAFAFA">Cairo, Egypt<tspan fill="#5C6670"> · </tspan><tspan fill="#9C9C9C">30.0444°N 31.2357°E</tspan></text>
+    <!-- row 4 -->
+    <text x="46"  y="283" fill="#9C9C9C">STATUS</text>
+    <text x="178" y="283" fill="#2A2A2A">//</text>
+    <circle class="dot" cx="216" cy="278" r="4" fill="#FF6B00" filter="url(#soft)"/>
+    <text x="228" y="283" fill="#FF6B00" letter-spacing="0.10em">OPEN TO WORK</text>
+  </g>
+
+  <!-- fire rule between card + bio -->
+  <line class="rule" x1="46" y1="302" x2="954" y2="302" stroke="#FF6B00" stroke-width="1" opacity="0.28"/>
+
+  <!-- ===== BIO ===== -->
+  <g class="mono" font-size="13.5" letter-spacing="0.012em" fill="#9C9C9C">
+    <text x="46" y="328">I build <tspan fill="#FF6B00">thinking machines</tspan><tspan fill="#5C6670"> — </tspan>full-stack products, applied AI/ML, and the cloud</text>
+    <text x="46" y="352">they run on. <tspan fill="#FF6B00">100+</tspan> projects shipped, <tspan fill="#FF6B00">400+</tspan> developers mentored, and one obsession:</text>
+    <text x="46" y="376">turning raw logic into things that feel alive. I design from first wireframe to</text>
+    <text x="46" y="400">production deployment, solo.</text>
+    <!-- tail cursor on the bio -->
+    <rect class="cursor" x="258" y="389" width="8" height="14" fill="#FF6B00"/>
+  </g>
+
+  <!-- ===== HUD CORNER TICKS ===== -->
+  <g stroke="#FF6B00" stroke-width="2" fill="none">
+    <path d="M32,44 L32,32 L44,32"/>
+    <path d="M968,44 L968,32 L956,32"/>
+    <path d="M32,396 L32,408 L44,408"/>
+    <path d="M968,396 L968,408 L956,408"/>
+  </g>
+</svg>

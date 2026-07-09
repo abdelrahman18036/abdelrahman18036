@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 76" width="1000" height="76" role="img" aria-label="Section 02 — The Arsenal · Stack · Core">
+  <defs>
+    <style>
+      @keyframes glintSweep { 0% { transform: translateX(0); opacity: 0; } 12% { opacity: 0.9; } 30% { opacity: 0; } 100% { transform: translateX(520px); opacity: 0; } }
+      .glint { animation: glintSweep 4s ease-in-out infinite; }
+      @keyframes dotPulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+      .statusDot { animation: dotPulse 2.4s ease-in-out infinite; }
+    </style>
+    <filter id="fireGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="ruleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF6B00" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FF6B00" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glintGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FF8A00" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFB56B" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FF8A00" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="nodeGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFB56B"/>
+      <stop offset="0.55" stop-color="#FF6B00"/>
+      <stop offset="1" stop-color="#FF4500"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <!-- LEFT CLUSTER -->
+  <g filter="url(#fireGlow)">
+    <path class="statusDot" d="M40 26 L47 30 L47 38 L40 42 L33 38 L33 30 Z" fill="url(#nodeGrad)"/>
+  </g>
+  <text x="66" y="45" font-family="'JetBrains Mono','Courier New',monospace" font-size="26" font-weight="700" fill="#FF6B00">02</text>
+  <text x="104" y="45" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" letter-spacing="0.02em" fill="#FAFAFA">THE ARSENAL</text>
+  <text x="295" y="44" font-family="'JetBrains Mono','Courier New',monospace" font-size="20" font-weight="700" fill="#FF6B00">·</text>
+  <text x="312" y="43" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" letter-spacing="0.2em" fill="#9C9C9C">STACK · CORE</text>
+
+  <!-- RULE -->
+  <g>
+    <rect x="470" y="37.5" width="490" height="1" fill="url(#ruleGrad)"/>
+    <g class="glint">
+      <rect x="470" y="35" width="70" height="6" fill="url(#glintGrad)"/>
+    </g>
+    <g filter="url(#fireGlow)">
+      <path fill="url(#nodeGrad)" d="M560 31.5 L565.5 34.75 L565.5 41.25 L560 44.5 L554.5 41.25 L554.5 34.75 Z">
+        <animateTransform attributeName="transform" type="translate" values="0 0; 26 0; 0 0" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" keyTimes="0;0.5;1"/>
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+
+  <!-- HUD CORNER TICK -->
+  <g stroke="#FF6B00" stroke-width="1.4" fill="none" opacity="0.9">
+    <path d="M986 20 L994 20 L994 28"/>
+    <path d="M986 56 L994 56 L994 48"/>
+  </g>
+</svg>

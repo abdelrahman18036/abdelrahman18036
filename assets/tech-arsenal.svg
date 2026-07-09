@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="The Arsenal — tech stack honeycomb of React, Next.js, TypeScript, Django, Python, Node.js, Docker, AWS, Three.js, GSAP, LangChain, CI/CD with a fire glow sweep">
+  <defs>
+    <style>
+      .lbl { font-family:'JetBrains Mono','Courier New',monospace; }
+      .tech { font-family:'JetBrains Mono','Courier New',monospace; font-size:12px; letter-spacing:0.05em; fill:#FAFAFA; text-anchor:middle; }
+      /* each hex: idle steelDeep outline + void2 fill; sweep brightens it to fire */
+      .hex { fill:#0A0A0A; stroke:#5C6670; stroke-width:1.4; }
+      .hexglow { fill:#FF6B00; opacity:0; }
+      @keyframes sweepStroke {
+        0%, 100% { stroke:#5C6670; stroke-width:1.4; }
+        8%       { stroke:#FF6B00; stroke-width:2.2; }
+        20%      { stroke:#5C6670; stroke-width:1.4; }
+      }
+      @keyframes sweepGlow {
+        0%, 100% { opacity:0; }
+        8%       { opacity:0.28; }
+        22%      { opacity:0; }
+      }
+      @keyframes sweepText {
+        0%, 100% { fill:#9C9C9C; }
+        8%       { fill:#FAFAFA; }
+        22%      { fill:#9C9C9C; }
+      }
+      .cell .hex  { animation:sweepStroke 4.8s linear infinite; }
+      .cell .hexglow { animation:sweepGlow 4.8s linear infinite; }
+      .cell .tech { animation:sweepText 4.8s linear infinite; fill:#9C9C9C; }
+      /* stagger by x-position across the honeycomb */
+      .c0  .hex,.c0  .hexglow,.c0  .tech { animation-delay:0s; }
+      .c1  .hex,.c1  .hexglow,.c1  .tech { animation-delay:-0.30s; }
+      .c2  .hex,.c2  .hexglow,.c2  .tech { animation-delay:-0.60s; }
+      .c3  .hex,.c3  .hexglow,.c3  .tech { animation-delay:-0.90s; }
+      .c4  .hex,.c4  .hexglow,.c4  .tech { animation-delay:-1.20s; }
+      .c5  .hex,.c5  .hexglow,.c5  .tech { animation-delay:-1.50s; }
+      .c6  .hex,.c6  .hexglow,.c6  .tech { animation-delay:-1.80s; }
+      @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.25;} }
+      .dot { animation:blink 2.2s ease-in-out infinite; }
+    </style>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- VOID background -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+
+  <!-- faint hex-grid whisper -->
+  <g opacity="0.05" stroke="#5C6670" stroke-width="0.6" fill="none">
+    <path d="M120 40 L160 40 L180 75 L160 110 L120 110 L100 75 Z"/>
+    <path d="M820 190 L860 190 L880 225 L860 260 L820 260 L800 225 Z"/>
+  </g>
+
+  <!-- Top label + HUD corner ticks -->
+  <text class="lbl" x="40" y="34" fill="#9C9C9C" font-size="12" letter-spacing="0.22em">THE ARSENAL // STACK.CORE</text>
+  <circle class="dot" cx="255" cy="30" r="3" fill="#FF6B00"/>
+  <text class="lbl" x="960" y="34" fill="#5C6670" font-size="11" letter-spacing="0.22em" text-anchor="end">12 MODULES ONLINE</text>
+
+  <!-- corner ticks -->
+  <g stroke="#FF6B00" stroke-width="1.6" fill="none" opacity="0.85">
+    <path d="M20 20 L20 44 M20 20 L44 20"/>
+    <path d="M980 20 L980 44 M980 20 L956 20"/>
+    <path d="M20 280 L20 256 M20 280 L44 280"/>
+    <path d="M980 280 L980 256 M980 280 L956 280"/>
+  </g>
+
+  <!-- HONEYCOMB
+       pointy-top hexagon centered at (cx,cy) with radius R=46:
+       vertices (relative): (0,-46)(40,-23)(40,23)(0,46)(-40,23)(-40,-23)
+       row1 y=118 : 5 hexes   row2 y=200 : 4 hexes (offset half) ... we do two rows of 6/6 = 12 -->
+
+  <!-- ROW 1 (y=115) : x = 120,240,360,480,600,720 -->
+  <g class="cell c0" transform="translate(120,115)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">React</text>
+  </g>
+  <g class="cell c1" transform="translate(240,115)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">Next.js</text>
+  </g>
+  <g class="cell c2" transform="translate(360,115)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">TypeScript</text>
+  </g>
+  <g class="cell c3" transform="translate(480,115)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">Django</text>
+  </g>
+  <g class="cell c4" transform="translate(600,115)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">Python</text>
+  </g>
+  <g class="cell c5" transform="translate(720,115)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">Node.js</text>
+  </g>
+
+  <!-- ROW 2 (y=200) offset by half : x = 180,300,420,540,660,780 -->
+  <g class="cell c0" transform="translate(180,200)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">Docker</text>
+  </g>
+  <g class="cell c1" transform="translate(300,200)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">AWS</text>
+  </g>
+  <g class="cell c2" transform="translate(420,200)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">Three.js</text>
+  </g>
+  <g class="cell c3" transform="translate(540,200)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">GSAP</text>
+  </g>
+  <g class="cell c4" transform="translate(660,200)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">LangChain</text>
+  </g>
+  <g class="cell c5" transform="translate(780,200)">
+    <polygon class="hexglow" filter="url(#soft)" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <polygon class="hex" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23"/>
+    <text class="tech" y="4">CI/CD</text>
+  </g>
+
+  <!-- moving scan line following the sweep -->
+  <rect x="-30" y="55" width="60" height="200" fill="#FF6B00" opacity="0.06">
+    <animateTransform attributeName="transform" type="translate" from="60 0" to="900 0" dur="4.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- bottom coordinate readout -->
+  <text class="lbl" x="820" y="285" fill="#5C6670" font-size="10" letter-spacing="0.2em" text-anchor="end">CAIRO · 30.0444°N 31.2357°E</text>
+</svg>

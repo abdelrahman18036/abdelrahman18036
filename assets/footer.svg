@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="1200" height="240" role="img" aria-label="abd·orange — cinematic hextech footer. Transmission end. Forging the hextech world. Cairo, EG.">
+  <defs>
+    <radialGradient id="voidGlow" cx="50%" cy="100%" r="75%">
+      <stop offset="0%" stop-color="#FF4500" stop-opacity="0.14"/>
+      <stop offset="45%" stop-color="#0A0A0A" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scanFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF8A00" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="horizonLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF6B00" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="orangeBody" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FF8A00"/>
+      <stop offset="60%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FF4500"/>
+    </radialGradient>
+    <filter id="fireGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <g id="hexFlat">
+      <polygon points="10,0 5,8.66 -5,8.66 -10,0 -5,-8.66 5,-8.66" fill="none" stroke="#FF6B00" stroke-width="0.8"/>
+    </g>
+    <style>
+      .mono { font-family: 'JetBrains Mono','Courier New',monospace; }
+      .disp { font-family: 'Segoe UI','Helvetica Neue',Arial,sans-serif; }
+      @keyframes emberRise { 0% { transform: translateY(0); opacity: 0; } 12% { opacity: 0.9; } 80% { opacity: 0.5; } 100% { transform: translateY(-120px); opacity: 0; } }
+      @keyframes hzPulse { 0%,100% { opacity: 0.35; } 50% { opacity: 0.85; } }
+      @keyframes dotBlink { 0%,45% { opacity: 1; } 55%,100% { opacity: 0.15; } }
+      .ember { animation: emberRise 6s linear infinite; }
+      .e2 { animation-duration: 7.5s; animation-delay: 1.4s; }
+      .e3 { animation-duration: 5.2s; animation-delay: 2.6s; }
+      .e4 { animation-duration: 8s; animation-delay: 3.7s; }
+      .e5 { animation-duration: 6.6s; animation-delay: 0.6s; }
+      .e6 { animation-duration: 7s; animation-delay: 4.5s; }
+      .hz { animation: hzPulse 4s ease-in-out infinite; }
+      .blink { animation: dotBlink 2.4s step-end infinite; }
+    </style>
+  </defs>
+
+  <!-- VOID background (baked, mode-independent) -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <rect width="1200" height="240" fill="url(#voidGlow)"/>
+
+  <!-- receding HEX-GRID HORIZON along the bottom -->
+  <g>
+    <!-- far row (small, faint) -->
+    <g class="hz" style="animation-delay:0s" opacity="0.28">
+      <use href="#hexFlat" x="180" y="210" transform="scale(0.55)" style="transform-box:fill-box"/>
+    </g>
+    <g opacity="0.9">
+      <!-- Build rows via transformed clones: three depth bands -->
+      <g transform="translate(0,206)" opacity="0.30">
+        <g transform="scale(0.5)">
+          <use href="#hexFlat" x="120" y="20"/><use href="#hexFlat" x="150" y="20"/><use href="#hexFlat" x="180" y="20"/>
+          <use href="#hexFlat" x="210" y="20"/><use href="#hexFlat" x="240" y="20"/><use href="#hexFlat" x="270" y="20"/>
+          <use href="#hexFlat" x="300" y="20"/><use href="#hexFlat" x="330" y="20"/><use href="#hexFlat" x="360" y="20"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Explicit horizon hex rows for reliable rendering -->
+  <g class="hz">
+    <!-- Row 3 (farthest, top of grid) -->
+    <g opacity="0.22" transform="translate(0,178) scale(1,0.85)">
+      <use href="#hexFlat" x="360" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="430" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="500" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="570" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="640" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="710" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="780" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="850" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="920" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="990" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="1060" y="0" transform="scale(0.6)"/>
+      <use href="#hexFlat" x="1130" y="0" transform="scale(0.6)"/>
+    </g>
+  </g>
+  <g class="hz" style="animation-delay:0.8s">
+    <!-- Row 2 (mid) -->
+    <g opacity="0.4" transform="translate(0,200)">
+      <use href="#hexFlat" x="90" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="145" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="200" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="255" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="310" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="365" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="420" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="475" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="530" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="585" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="640" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="695" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="750" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="805" y="0" transform="scale(0.85)"/>
+      <use href="#hexFlat" x="860" y="0" transform="scale(0.85)"/>
+    </g>
+  </g>
+  <g class="hz" style="animation-delay:1.6s">
+    <!-- Row 1 (nearest, bottom) -->
+    <g opacity="0.55" transform="translate(0,232)">
+      <use href="#hexFlat" x="40" y="0"/>
+      <use href="#hexFlat" x="110" y="0"/>
+      <use href="#hexFlat" x="180" y="0"/>
+      <use href="#hexFlat" x="250" y="0"/>
+      <use href="#hexFlat" x="320" y="0"/>
+      <use href="#hexFlat" x="390" y="0"/>
+      <use href="#hexFlat" x="460" y="0"/>
+      <use href="#hexFlat" x="530" y="0"/>
+      <use href="#hexFlat" x="600" y="0"/>
+      <use href="#hexFlat" x="670" y="0"/>
+      <use href="#hexFlat" x="740" y="0"/>
+      <use href="#hexFlat" x="810" y="0"/>
+      <use href="#hexFlat" x="880" y="0"/>
+      <use href="#hexFlat" x="950" y="0"/>
+      <use href="#hexFlat" x="1020" y="0"/>
+      <use href="#hexFlat" x="1090" y="0"/>
+      <use href="#hexFlat" x="1160" y="0"/>
+    </g>
+  </g>
+
+  <!-- faint vanishing line above the horizon -->
+  <rect x="0" y="176" width="1200" height="1" fill="url(#horizonLine)"/>
+
+  <!-- EMBERS drifting upward from the horizon -->
+  <g fill="#FF8A00">
+    <circle class="ember"    cx="230"  cy="190" r="1.6"/>
+    <circle class="ember e2" cx="410"  cy="196" r="1.3" fill="#FF6B00"/>
+    <circle class="ember e3" cx="600"  cy="192" r="1.8"/>
+    <circle class="ember e4" cx="780"  cy="198" r="1.2" fill="#FF4500"/>
+    <circle class="ember e5" cx="915"  cy="188" r="1.5"/>
+    <circle class="ember e6" cx="1015" cy="194" r="1.4" fill="#FF6B00"/>
+    <circle class="ember e3" cx="330"  cy="200" r="1.1"/>
+    <circle class="ember e5" cx="690"  cy="186" r="1.3" fill="#FF6B00"/>
+  </g>
+
+  <!-- CENTER: citrus logo glyph + wordmark -->
+  <g transform="translate(514,96)">
+    <!-- citrus cross-section -->
+    <g filter="url(#fireGlow)">
+      <circle cx="0" cy="0" r="17" fill="url(#orangeBody)"/>
+      <circle cx="0" cy="0" r="17" fill="none" stroke="#FF4500" stroke-width="1.4"/>
+      <circle cx="0" cy="0" r="13.5" fill="none" stroke="#0d1117" stroke-width="1" opacity="0.55"/>
+      <g stroke="#0d1117" stroke-width="1" opacity="0.6">
+        <line x1="0" y1="0" x2="0" y2="-13.5"/>
+        <line x1="0" y1="0" x2="9.5" y2="-9.5"/>
+        <line x1="0" y1="0" x2="13.5" y2="0"/>
+        <line x1="0" y1="0" x2="9.5" y2="9.5"/>
+        <line x1="0" y1="0" x2="0" y2="13.5"/>
+        <line x1="0" y1="0" x2="-9.5" y2="9.5"/>
+        <line x1="0" y1="0" x2="-13.5" y2="0"/>
+        <line x1="0" y1="0" x2="-9.5" y2="-9.5"/>
+      </g>
+      <circle cx="4" cy="-6" r="1.1" fill="#0d1117" opacity="0.7"/>
+      <circle cx="-5" cy="4" r="1.1" fill="#0d1117" opacity="0.7"/>
+      <circle cx="6" cy="5" r="1.1" fill="#0d1117" opacity="0.7"/>
+      <circle cx="0" cy="0" r="1.8" fill="#0d1117" opacity="0.75"/>
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="60s" repeatCount="indefinite"/>
+    </g>
+    <!-- wordmark -->
+    <text x="34" y="8" class="disp" font-size="30" font-weight="800" letter-spacing="-0.03em">
+      <tspan fill="#FAFAFA">abd</tspan><tspan fill="#FF6B00">·orange</tspan>
+    </text>
+  </g>
+
+  <!-- tagline -->
+  <text x="600" y="140" text-anchor="middle" class="mono" font-size="10.5" letter-spacing="0.22em" fill="#9C9C9C">
+    TRANSMISSION END // FORGING THE HEXTECH WORLD
+  </text>
+
+  <!-- status dot -->
+  <circle class="blink" cx="452" cy="136" r="2.4" fill="#FF6B00"/>
+
+  <!-- SCAN LINE sweeping across -->
+  <g>
+    <rect x="-260" y="0" width="260" height="240" fill="url(#scanFade)" opacity="0.5">
+      <animate attributeName="x" from="-260" to="1200" dur="7s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- BOTTOM mono line -->
+  <text x="600" y="222" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="0.2em" fill="#9C9C9C">
+    © 2026 ABDELRAHMAN ABDELNASSER · CAIRO, EG · abdorange.me
+  </text>
+
+  <!-- HUD corner ticks -->
+  <g stroke="#FF6B00" stroke-width="1.5" fill="none">
+    <path d="M16 16 h20 M16 16 v20"/>
+    <path d="M1184 16 h-20 M1184 16 v20"/>
+    <path d="M16 224 h20 M16 224 v-20"/>
+    <path d="M1184 224 h-20 M1184 224 v-20"/>
+  </g>
+  <!-- section code -->
+  <text x="44" y="30" class="mono" font-size="9" letter-spacing="0.24em" fill="#5C6670">EOF · SIGN-OFF</text>
+  <text x="1156" y="30" text-anchor="end" class="mono" font-size="9" letter-spacing="0.24em" fill="#5C6670">30.0444°N 31.2357°E</text>
+</svg>

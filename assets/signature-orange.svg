@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" width="1000" height="300" role="img" aria-label="The Orange — one particle-being in three ages: Color, Seal, and Fruit. A signature story banner on a dark void lit by fire-orange.">
+  <defs>
+    <style>
+      .mono { font-family: 'JetBrains Mono','Courier New',monospace; }
+      .disp { font-family: 'Segoe UI','Helvetica Neue',Arial,sans-serif; }
+
+      @keyframes twinkle { 0%,100% { opacity:.25 } 50% { opacity:1 } }
+      @keyframes drift1 { 0%,100% { transform:translate(0,0) } 50% { transform:translate(1.5px,-2px) } }
+      @keyframes drift2 { 0%,100% { transform:translate(0,0) } 50% { transform:translate(-2px,1.5px) } }
+      @keyframes breathe { 0%,100% { opacity:.35 } 50% { opacity:.9 } }
+      @keyframes pulse { 0%,100% { transform:scale(1); opacity:.9 } 50% { transform:scale(1.06); opacity:1 } }
+      @keyframes blink { 0%,45% { opacity:1 } 55%,100% { opacity:.15 } }
+      @keyframes scan { 0% { transform:translateX(0) } 100% { transform:translateX(1000px) } }
+
+      .tw   { animation: twinkle 3s ease-in-out infinite; }
+      .d1   { animation: drift1 5s ease-in-out infinite; }
+      .d2   { animation: drift2 6s ease-in-out infinite; }
+      .brc  { animation: breathe 4s ease-in-out infinite; }
+      .puls { transform-box: fill-box; transform-origin: center; animation: pulse 3.2s ease-in-out infinite; }
+      .bk   { animation: blink 2.4s step-end infinite; }
+    </style>
+
+    <radialGradient id="rindGrad" cx="50%" cy="42%" r="60%">
+      <stop offset="0%" stop-color="#FF8A00"/>
+      <stop offset="55%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FF4500"/>
+    </radialGradient>
+    <radialGradient id="fleshGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3a1500"/>
+      <stop offset="100%" stop-color="#1a0800"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- faint hex grid tile -->
+    <pattern id="hexgrid" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="scale(1)">
+      <path d="M14 0 L42 0 L56 24 L42 48 L14 48 L0 24 Z" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+    </pattern>
+
+    <!-- flow path for the traveling particle across all three stages -->
+    <path id="flowpath" d="M180 150 C 320 90, 380 210, 500 150 C 620 90, 700 210, 820 150" fill="none"/>
+  </defs>
+
+  <!-- VOID background (baked, mode-independent) -->
+  <rect width="100%" height="100%" fill="#0d1117"/>
+  <rect width="1000" height="300" fill="url(#hexgrid)" opacity="0.5"/>
+
+  <!-- frame + HUD corner ticks -->
+  <rect x="16" y="16" width="968" height="268" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+  <g stroke="#FF6B00" stroke-width="2" fill="none">
+    <path d="M16 34 L16 16 L34 16"/>
+    <path d="M984 34 L984 16 L966 16"/>
+    <path d="M16 266 L16 284 L34 284"/>
+    <path d="M984 266 L984 284 L966 284"/>
+  </g>
+
+  <!-- top label -->
+  <text x="32" y="42" class="mono" fill="#9C9C9C" font-size="11" letter-spacing="3.5">THE ORANGE // ONE SYSTEM · THREE AGES</text>
+  <g class="bk"><circle cx="960" cy="38" r="3" fill="#FF6B00"/></g>
+  <text x="945" y="42" text-anchor="end" class="mono" fill="#5C6670" font-size="9" letter-spacing="2.5">SUBJECT.01</text>
+
+  <!-- scanning line -->
+  <g opacity="0.10">
+    <rect x="-1000" y="16" width="180" height="268" fill="url(#rindGrad)" style="animation: scan 7s linear infinite;"/>
+  </g>
+
+  <!-- dashed connectors between stages -->
+  <g stroke="#FF6B00" stroke-width="1" fill="none" opacity="0.4" stroke-dasharray="2 6">
+    <line x1="255" y1="150" x2="430" y2="150"/>
+    <line x1="575" y1="150" x2="740" y2="150"/>
+  </g>
+
+  <!-- ===================== STAGE 1 · COLOR (x180) ===================== -->
+  <g>
+    <!-- dot cluster forming a head silhouette -->
+    <g fill="#FF6B00" filter="url(#glow)">
+      <g class="d1">
+        <circle cx="180" cy="112" r="2.4" class="tw" style="animation-delay:.0s"/>
+        <circle cx="196" cy="118" r="1.8" class="tw" style="animation-delay:.4s"/>
+        <circle cx="164" cy="118" r="1.8" class="tw" style="animation-delay:.8s"/>
+        <circle cx="205" cy="134" r="2.2" class="tw" style="animation-delay:.2s"/>
+        <circle cx="155" cy="134" r="2.2" class="tw" style="animation-delay:.6s"/>
+        <circle cx="210" cy="152" r="1.9" class="tw" style="animation-delay:1.0s"/>
+        <circle cx="150" cy="152" r="1.9" class="tw" style="animation-delay:1.4s"/>
+      </g>
+      <g class="d2">
+        <circle cx="207" cy="170" r="2.3" class="tw" style="animation-delay:.3s"/>
+        <circle cx="153" cy="170" r="2.3" class="tw" style="animation-delay:.7s"/>
+        <circle cx="198" cy="184" r="2.0" class="tw" style="animation-delay:1.1s"/>
+        <circle cx="162" cy="184" r="2.0" class="tw" style="animation-delay:1.5s"/>
+        <circle cx="180" cy="190" r="2.4" class="tw" style="animation-delay:.9s"/>
+        <circle cx="180" cy="150" r="3.0" class="tw" fill="#FF8A00" style="animation-delay:.1s"/>
+        <circle cx="171" cy="142" r="1.6" class="tw" style="animation-delay:1.2s"/>
+        <circle cx="189" cy="142" r="1.6" class="tw" style="animation-delay:.5s"/>
+        <circle cx="180" cy="163" r="1.5" class="tw" fill="#FF4500" style="animation-delay:1.3s"/>
+      </g>
+      <!-- scattered outliers -->
+      <circle cx="222" cy="126" r="1.3" class="tw" style="animation-delay:1.6s"/>
+      <circle cx="138" cy="126" r="1.3" class="tw" style="animation-delay:.2s"/>
+      <circle cx="216" cy="176" r="1.2" class="tw" style="animation-delay:1.8s"/>
+      <circle cx="144" cy="176" r="1.2" class="tw" style="animation-delay:.6s"/>
+    </g>
+    <text x="180" y="228" text-anchor="middle" class="mono" fill="#9C9C9C" font-size="9" letter-spacing="1.5">COLOR · the maker, in his own hue</text>
+    <text x="180" y="70" text-anchor="middle" class="mono" fill="#5C6670" font-size="9" letter-spacing="2.5">01 · COLOR</text>
+  </g>
+
+  <!-- ===================== STAGE 2 · SEAL (x500) ===================== -->
+  <g>
+    <!-- pointy-top hex outline, self-drawing -->
+    <path d="M500 96 L537 118 L537 162 L500 184 L463 162 L463 118 Z"
+          fill="none" stroke="#FF6B00" stroke-width="2" filter="url(#glow)"
+          stroke-dasharray="240" stroke-dashoffset="240">
+      <animate attributeName="stroke-dashoffset" from="240" to="0" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- compact citrus glyph, pulsing -->
+    <g class="puls">
+      <circle cx="500" cy="140" r="22" fill="url(#fleshGrad)" stroke="#FF6B00" stroke-width="1.6"/>
+      <g stroke="#FF8A00" stroke-width="1.1" opacity="0.9">
+        <line x1="500" y1="140" x2="500" y2="119"/>
+        <line x1="500" y1="140" x2="515" y2="126"/>
+        <line x1="500" y1="140" x2="521" y2="140"/>
+        <line x1="500" y1="140" x2="515" y2="154"/>
+        <line x1="500" y1="140" x2="500" y2="161"/>
+        <line x1="500" y1="140" x2="485" y2="154"/>
+        <line x1="500" y1="140" x2="479" y2="140"/>
+        <line x1="500" y1="140" x2="485" y2="126"/>
+      </g>
+      <circle cx="500" cy="140" r="2.4" fill="#FF6B00"/>
+      <circle cx="504" cy="132" r="1.1" fill="#FFB25E"/>
+      <circle cx="494" cy="147" r="1.1" fill="#FFB25E"/>
+    </g>
+    <text x="500" y="228" text-anchor="middle" class="mono" fill="#9C9C9C" font-size="9" letter-spacing="1.5">SEAL · his mark on the work</text>
+    <text x="500" y="70" text-anchor="middle" class="mono" fill="#5C6670" font-size="9" letter-spacing="2.5">02 · SEAL</text>
+  </g>
+
+  <!-- ===================== STAGE 3 · FRUIT (x820) ===================== -->
+  <g>
+    <!-- breathing rind glow -->
+    <circle cx="820" cy="150" r="55" fill="#FF6B00" opacity="0.18" filter="url(#softglow)" class="brc"/>
+    <g filter="url(#glow)">
+      <!-- rind + pith -->
+      <circle cx="820" cy="150" r="55" fill="url(#rindGrad)"/>
+      <circle cx="820" cy="150" r="48" fill="#0A0A0A"/>
+      <circle cx="820" cy="150" r="48" fill="url(#fleshGrad)"/>
+      <!-- slowly rotating wedge structure -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 820 150" to="360 820 150" dur="42s" repeatCount="indefinite"/>
+        <g stroke="#FF6B00" stroke-width="1.5" opacity="0.9">
+          <line x1="820" y1="150" x2="820" y2="103"/>
+          <line x1="820" y1="150" x2="853" y2="117"/>
+          <line x1="820" y1="150" x2="867" y2="150"/>
+          <line x1="820" y1="150" x2="853" y2="183"/>
+          <line x1="820" y1="150" x2="820" y2="197"/>
+          <line x1="820" y1="150" x2="787" y2="183"/>
+          <line x1="820" y1="150" x2="773" y2="150"/>
+          <line x1="820" y1="150" x2="787" y2="117"/>
+        </g>
+        <!-- seeds -->
+        <g fill="#FFB25E">
+          <ellipse cx="820" cy="124" rx="2.2" ry="3.4"/>
+          <ellipse cx="843" cy="139" rx="2.2" ry="3.4" transform="rotate(45 843 139)"/>
+          <ellipse cx="797" cy="139" rx="2.2" ry="3.4" transform="rotate(-45 797 139)"/>
+          <ellipse cx="820" cy="176" rx="2.2" ry="3.4"/>
+        </g>
+      </g>
+      <!-- center pip -->
+      <circle cx="820" cy="150" r="4" fill="#FF8A00"/>
+      <circle cx="820" cy="150" r="1.6" fill="#FFDFAE"/>
+    </g>
+    <text x="820" y="228" text-anchor="middle" class="mono" fill="#9C9C9C" font-size="9" letter-spacing="1.5">FRUIT · the namesake, made literal</text>
+    <text x="820" y="70" text-anchor="middle" class="mono" fill="#5C6670" font-size="9" letter-spacing="2.5">03 · FRUIT</text>
+  </g>
+
+  <!-- traveling particle tying all three stages together -->
+  <circle r="3.4" fill="#FFDFAE" filter="url(#softglow)">
+    <animateMotion dur="7s" repeatCount="indefinite" rotate="auto">
+      <mpath href="#flowpath"/>
+    </animateMotion>
+    <animate attributeName="opacity" values="0;1;1;1;0" keyTimes="0;0.1;0.5;0.9;1" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- bottom coordinate readout -->
+  <text x="32" y="272" class="mono" fill="#5C6670" font-size="9" letter-spacing="2">CAIRO · 30.0444°N 31.2357°E</text>
+  <text x="968" y="272" text-anchor="end" class="mono" fill="#5C6670" font-size="9" letter-spacing="2">FORGING THE HEXTECH WORLD</text>
+</svg>
